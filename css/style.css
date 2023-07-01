@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Caveat:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Belanosima', sans-serif;
+    color: #E5D5D5;
+}
+
+body {
+    display: flex;
+}
+
+#inicial {
+    background-image: url(../assets/fundo_inicial.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#app {
+    background-image: url(../assets/fundo_time.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#duelo {
+    background-image: url(../assets/fundo_batalha.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#vitoria {
+    background-image: url(../assets/fundo_vitoria.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#derrota {
+    background-image: url(../assets/fundo_derrota.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    background-color: #4DC34B;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 0px;
+    padding: 10px;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.7);    
+    font-size: 25px;    
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;              
+}
+
+button:hover {
+    font-size: 30px;
+    padding: 15px;
+}
+
+#play-game {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#voltar {
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+#proximo {
+    position: fixed;
+    bottom: 5%;
+    left: 43%;
+    transform: translateX(-50%);
+}
+
+#lista_pokemons {   
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background: rgba(2, 32, 9, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.carta {    
+    position: relative;   
+    display: inline-block;
+    background-color: #3a3d3a;
+    border: 1px solid gray;        
+    width: 150px;
+    height: 230px;
+    margin: 10px;
+    margin-left: 50px;    
+}
+
+.carta_imagem img { 
+    position:absolute;
+    text-align: center;
+    background: rgb(143,6,161);
+    background: linear-gradient(90deg, rgba(143,6,161,1) 0%, rgba(22,7,152,1) 100%);
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    width: 120px;
+    height: 130px;        
+}
+
+
+.carta_texto{
+    position: relative;
+    top: 60%;    
+    background: rgb(143,6,161);
+    background: linear-gradient(90deg, rgba(143,6,161,1) 0%, rgba(22,7,152,1) 100%);
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5);    
+    margin: 8px;
+    padding-left: 5px;
+}
+
+.carta_texto h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 18px; 
+}
+
+.carta_texto p {  
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 16px;    
+}
