@@ -1,5 +1,7 @@
+/* import da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Caveat:wght@400;500&display=swap');
 
+/* reset da estilização padrão */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,8 @@ body {
     display: flex;
 }
 
+
+/* estilização dos fundos de cada tela */
 #inicial {
     background-image: url(../assets/fundo_inicial.png);    
     background-repeat: no-repeat;
@@ -41,6 +45,7 @@ body {
     background-size: cover;
 }
 
+/* estilização dos botões */
 button {
     background-color: #4DC34B;
     text-decoration: none;
@@ -56,8 +61,8 @@ button {
 }
 
 button:hover {
-    font-size: 30px;
-    padding: 15px;
+    font-size: 27px;
+    padding: 12px;
 }
 
 #play-game {
@@ -81,6 +86,7 @@ button:hover {
     transform: translateX(-50%);
 }
 
+/* estilização da lista dos pokemons */
 #lista_pokemons {   
     width: 50%;
     height: auto;
@@ -89,18 +95,19 @@ button:hover {
     background: rgba(2, 32, 9, 0.60);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-top: 30px;
-    margin-left: 25px;
+    margin-left: 25px;   
 }
 
 .carta {    
     position: relative;   
     display: inline-block;
     background-color: #3a3d3a;
-    border: 1px solid gray;        
-    width: 150px;
-    height: 230px;
+    border: 1px solid gray;  
+    border-radius: 5px;          
+    width: 140px;
+    height: 220px;
     margin: 10px;
-    margin-left: 50px;    
+    margin-left: 12px;       
 }
 
 .carta_imagem img { 
@@ -109,31 +116,41 @@ button:hover {
     background: rgb(143,6,161);
     background: linear-gradient(90deg, rgba(143,6,161,1) 0%, rgba(22,7,152,1) 100%);
     box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; 
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);    
-    width: 120px;
-    height: 130px;        
+    width: 100px;
+    height: 110px;            
 }
-
 
 .carta_texto{
     position: relative;
     top: 60%;    
     background: rgb(143,6,161);
     background: linear-gradient(90deg, rgba(143,6,161,1) 0%, rgba(22,7,152,1) 100%);
-    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5);    
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;    
     margin: 8px;
+    margin-top: 2px;
     padding-left: 5px;
 }
 
 .carta_texto h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;    
-    font-size: 18px; 
+    font-size: 16px; 
+}
+
+.carta_texto .numero {
+    text-align: right;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 14px; 
+    
 }
 
 .carta_texto p {  
     font-family: Arial, Helvetica, sans-serif;  
-    font-size: 16px;    
+    font-size: 14px;    
 }
