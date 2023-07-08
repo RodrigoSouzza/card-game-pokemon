@@ -100,8 +100,14 @@ function adicionar(event){
         removerSeleção(cartaSelecionada)
         return
     }   
-
+    
     const timePokemon = document.getElementById('time_pokemon')
+    const cartasSelecionadas = timePokemon.getElementsByClassName('carta')
+
+    if(cartasSelecionadas.length >=5){
+        alert('Voçê ja selecionou o time, escolha apenas 5 pokemons!')
+        return
+    }
 
     const cartaClonada = cartaSelecionada.cloneNode(true)
 
