@@ -95,10 +95,37 @@ criaListaCartas()
 
 function adicionar(event){
     const cartaSelecionada = event.target.parentNode.parentNode
-    const timePokemon = document.getElementById('time_pokemon')
-    const cartaClonada = cartaSelecionada.cloneNode(true)
-    const botao = cartaClonada.querySelector('.selecionar')
 
+    if(cartaSelecionada.classList.contains('selecionada')){
+        removerSeleção(cartaSelecionada)
+        return
+    }   
+
+    const timePokemon = document.getElementById('time_pokemon')
+
+    const cartaClonada = cartaSelecionada.cloneNode(true)
+
+    const botao = cartaClonada.querySelector('.selecionar')    
+    
     botao.parentNode.removeChild(botao)
-    timePokemon.appendChild(cartaClonada)
+    cartaSelecionada.classList.add('selecionada')
+
+    const botaoExcluir = document.createElement('button')
+    botaoExcluir.className = 'excluir'
+    botaoExcluir.textContent = '-'
+    botaoExcluir.addEventListener('click', function(){
+        removerSeleção(cartaClonada)
+    })
+    cartaClonada.querySelector('.carta_texto').appendChild(botaoExcluir)
+    timePokemon.appendChild(cartaClonada)    
+}
+
+function removerSeleção(carta){
+    const timePokemon = document.getElementById('time_pokemon')
+    
+    timePokemon.removeChild(carta)
+
+    const cartaOriginalId = carta.id.replace('carta_','')
+    const cartaOriginal = document.getElementById(`carta_${cartaOriginalId}`)
+    cartaOriginal.classList.remove('selecionada')
 }

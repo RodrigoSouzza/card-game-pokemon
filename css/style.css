@@ -97,6 +97,25 @@ button:hover {
     background-color: #000;
     color: #E5D5D5;
 }
+
+.carta_texto .excluir{
+    position: relative;
+    font-size: 16px;
+    box-shadow: none;    
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 4px;
+    left: 95px;
+    background-color: red;
+    color: white;
+}
+
+.carta_texto .excluir:hover{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;    
+}
+
 /* estilização do time pokemon */
 #time_pokemon{
     width: 43%;
@@ -133,6 +152,11 @@ button:hover {
     height: 300px;
     margin: 10px;
     margin-left: 12px;       
+}
+
+.carta.selecionada{
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .carta_imagem img { 
