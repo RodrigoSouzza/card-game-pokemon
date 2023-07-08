@@ -9,7 +9,7 @@
     color: #E5D5D5;
 }
 
-body {
+body {    
     display: flex;
 }
 
@@ -72,25 +72,50 @@ button:hover {
     transform: translateX(-50%);
 }
 
-#voltar {
+#confirmar{
     position: fixed;
-    bottom: 5%;
-    left: 10%;
-    transform: translateX(-50%);
+    bottom: 50px;
+    right: 25%;
+    transform: translateX(50%);
 }
 
-#proximo {
-    position: fixed;
-    bottom: 5%;
-    left: 43%;
-    transform: translateX(-50%);
+.selecionar {
+    position: relative;
+    font-size: 16px;
+    box-shadow: none;    
+    margin: 0;
+    padding: 4px;
+    left: 95px; 
+    margin-bottom: 5px; 
+    color: #3a3d3a;  
+}
+
+.selecionar:hover{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    background-color: #000;
+    color: #E5D5D5;
+}
+/* estilização do time pokemon */
+#time_pokemon{
+    width: 43%;
+    height: 500px;  
+    overflow-y: scroll; 
+    border-radius: 20px 0px 0px 20px;   
+    border: 2px solid #000;
+    background: rgba(2, 32, 9, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-left: 25px;
 }
 
 /* estilização da lista dos pokemons */
 #lista_pokemons {   
     width: 50%;
-    height: auto;
-    border-radius: 20px;
+    height: 600px;
+    overflow-y: scroll;
+    border-radius: 20px 0px 0px 20px;
     border: 2px solid #000;
     background: rgba(2, 32, 9, 0.60);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -105,7 +130,7 @@ button:hover {
     border: 1px solid gray;  
     border-radius: 5px;          
     width: 140px;
-    height: 220px;
+    height: 300px;
     margin: 10px;
     margin-left: 12px;       
 }
@@ -117,6 +142,7 @@ button:hover {
     background: linear-gradient(90deg, rgba(143,6,161,1) 0%, rgba(22,7,152,1) 100%);
     box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.5);
     border-radius: 5px; 
+    margin-bottom: 10px;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);    
