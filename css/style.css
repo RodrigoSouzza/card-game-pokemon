@@ -116,6 +116,13 @@ button:hover {
     padding: 4px;    
 }
 
+#batalhar {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* estilização do time pokemon */
 #time_pokemon{
     width: 43%;
@@ -203,4 +210,69 @@ button:hover {
 .carta_texto p {  
     font-family: Arial, Helvetica, sans-serif;  
     font-size: 14px;    
+}
+
+/* estilização da pagina de duelo*/
+
+#jogador_time {  
+    display: inline;  
+    width: 25%;
+    height: 500px;
+    overflow-y: scroll;
+    border-radius: 20px 0px 0px 20px;
+    border: 2px solid #000;
+    background: rgba(2, 32, 9, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+#placar_jogador {    
+    text-align: left;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2px;
+    position: fixed;
+    bottom: 40px;
+    left: 2%;
+}
+
+#time_maquina {        
+    width: 25%;
+    height: 500px;
+    overflow-y: scroll;
+    border-radius: 20px 0px 0px 20px;
+    border: 2px solid #000;
+    background: rgba(2, 32, 9, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+#placar_maquina {
+    text-align: right;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2px;
+    position: fixed;
+    bottom: 40px;
+    right: 2%;
+}
+
+.pontos img{
+    display: inline;
+    width: 30px;
+    height: 30px;
+}
+
+#areaDuelo {   
+    display: inline; 
+    width: 40%;
+    height: 500px;    
+    border-radius: 20px;
+    border: 2px solid #000;
+    background: rgba(2, 32, 9, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-left: 25px;
 }

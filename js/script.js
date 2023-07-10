@@ -135,3 +135,22 @@ function removerSeleção(carta){
     const cartaOriginal = document.getElementById(`carta_${cartaOriginalId}`)
     cartaOriginal.classList.remove('selecionada')
 }
+
+function salvarEquipe(){
+    let equipe = []
+
+    const timePokemon = document.getElementById('time_pokemon')
+    let cartaSelecionada = timePokemon.getElementsByClassName('carta')
+    
+    for (let indice = 0; indice < cartaSelecionada.length; indice++) {
+        let pokemon = cartaSelecionada[indice]
+        equipe.push(pokemon)        
+    }
+    if(equipe.length < 5){
+        alert('A equipe não está completa, você deve escolher 5 pokemons')
+    }
+    localStorage.setItem('equipePokemon', JSON.stringify(equipe))
+       
+    console.log(equipe)    
+}
+
