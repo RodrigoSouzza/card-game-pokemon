@@ -228,9 +228,7 @@ button:hover {
 }
 
 #placar_jogador {    
-    text-align: left;
-    border: 2px solid white;
-    border-radius: 10px;
+    text-align: left;   
     padding: 2px;
     position: fixed;
     bottom: 40px;
@@ -249,18 +247,15 @@ button:hover {
     margin-left: 25px;
 }
 
-#placar_maquina {
+#placar_maquina { 
     text-align: right;
-    border: 2px solid white;
-    border-radius: 10px;
     padding: 2px;
     position: fixed;
     bottom: 40px;
     right: 2%;
 }
 
-.pontos img{
-    display: inline;
+.pontos img{    
     width: 30px;
     height: 30px;
 }

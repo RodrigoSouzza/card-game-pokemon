@@ -136,21 +136,30 @@ function removerSeleção(carta){
     cartaOriginal.classList.remove('selecionada')
 }
 
-function salvarEquipe(){
-    let equipe = []
+function redirecionarPagina(cartasSelecionadas){
+    localStorage.setItem('cartaSelecionadas', JSON.stringify(cartasSelecionadas))
 
-    const timePokemon = document.getElementById('time_pokemon')
-    let cartaSelecionada = timePokemon.getElementsByClassName('carta')
-    
-    for (let indice = 0; indice < cartaSelecionada.length; indice++) {
-        let pokemon = cartaSelecionada[indice]
-        equipe.push(pokemon)        
-    }
-    if(equipe.length < 5){
-        alert('A equipe não está completa, você deve escolher 5 pokemons')
-    }
-    localStorage.setItem('equipePokemon', JSON.stringify(equipe))
-       
-    console.log(equipe)    
+    window.location.href = 'duelo.html'
 }
+
+function salvarEquipe(){
+    const timePokemon = document.getElementById('time_pokemon')
+    const cartasSelecionadas = timePokemon.getElementsByClassName('carta')
+
+    if(cartasSelecionadas.length < 5){
+        alert("Escolha no minimo 5 pokemon para criar uma equipe!")
+        return
+    }
+
+    const equipe = []
+
+    for (let indice = 0; indice < cartasSelecionadas.length; indice ++){
+        let carta = cartasSelecionadas[indice]
+        equipe.push(carta.id)
+    }
+
+    redirecionarPagina(equipe)
+}
+
+
 
